@@ -4,9 +4,11 @@ exports.handler = function (event, context, callback) {
 
 	ddb.query({
 		TableName: 'ThuvvaTable',
-		ExpressionAttributeValues: { ':test': '002' },
+		ExpressionAttributeValues: {
+			':test': '002'
+		},
 		KeyConditionExpression: 'ID = :test',
-		FilterExpression: '',
+		FilterExpression: 'ID = :test'
 	}, function (err, data) {
 		if (err) {
 			console.log('error : ', err);
