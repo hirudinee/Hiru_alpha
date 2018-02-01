@@ -12,8 +12,10 @@ exports.handler = function (event, context, callback) {
 	}, function (err, data) {
 		if (err) {
 			console.log('error : ', err);
+			callback(null, err);
 		} else {
-			console.log('data : ', data);
+			console.log('data success: ', data);
+			console.log('test');
 			callback(null, data);
 		}
 	});
