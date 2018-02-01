@@ -8,7 +8,7 @@ exports.handler = function (event, context, callback) {
 			':test': '002'
 		},
 		KeyConditionExpression: 'ID = :test',
-		FilterExpression: 'Name = :test'
+		FilterExpression: 'test01 = :test'
 	}, function (err, data) {
 		if (err) {
 			console.log('error : ', err);
